@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/72802377fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="center">
+        <div class="header">Login Form</div>
+        <form>
+            <input type="text" placeholder="Email or Username">
+            <i class="far fa-envelope"></i>
+            <input id="ps" type="password" placeholder="Password">
+            <i class="fas fa-lock" onclick="show()"></i>
+            <input type="submit" value="Log In">
+            <a href="registerform.html">  Register Here...</a>
+        </form>
+    </div>
+    <script>
+        function show(){
+            var ps=document.getElementById('ps');
+            var icon=document.querySelector('.fas');
+            if(ps.type==="password"){
+                ps.type="text";
+                ps.style.marginTop="20px";
+                icon.style.color="#7f2092";
+            }
+            else{
+                icon.style.color="grey";
+            }
+        }
+    </script>
+</body>
+</html>
